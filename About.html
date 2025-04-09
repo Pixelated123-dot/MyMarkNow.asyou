@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <link rel="stylesheet" href="About.css"/> 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .carousel-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .btn-circle {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .left-btn {
+            left: 5%;
+        }
+        .right-btn {
+            right: 5%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><h1>MyMarkNow.asyou</h1></div>
+            <div class="right">
+                <a href="MyAlbum.html" id="MYALBUM">MY ALBUM</a>
+                <a href="Mywork.html" id="MYWORK">MY WORK</a>
+                <a href="Contact.html" id="CONTACT">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="carousel-container">
+                <img id="carouselImage" src="MyAlbum\1.jpg" class="carousel-img" alt="Carousel Image" />
+                <!-- ปุ่มเปลี่ยนรูป -->
+                <div class="overlay">
+                    <h1>WELCOME</h1>
+                    <p class="element">Take a little time to savour life<br>one foot step at a time...</p>
+                </div>
+                <a href="javascript:void(0);" class="btn btn-circle left-btn" onclick="changeImage('prev')">❮</a>
+                <a href="javascript:void(0);" class="btn btn-circle right-btn" onclick="changeImage('next')">❯</a>
+            </div>
+        </section>
+
+        <section class="intro-hero">
+            <div class="intro-overlay">
+                <h1>Phuwanai Aphichitpongchai</h1><br>
+                <p>Hello! I'm Mark, a passionate high school student with a deep love <br> for technology, robotics, and creative problem-solving. I'd like...</p>
+            </div>
+        </section>
+        
+        <section class="about-me">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="MyAlbum/Me.jpg" alt="My Portrait" />
+                </div>
+                <div class="about-text-story">
+                    <h2>About Me</h2>
+                    <p>
+                        <strong>Hello! I'm Mark,</strong> a passionate high school student with a deep love for technology, robotics, and creative problem-solving. I enjoy building things that make life more efficient — whether it's a robot or a web application.
+                    </p>
+                    <p>
+                        <strong>I believe</strong> that technology has the power to solve real-world problems and make life better for everyone. Whether it’s debugging a stubborn program or brainstorming ideas with a team, I enjoy every part of the creative process.
+                    </p>
+                    <p>
+                        <strong>I’m constantly exploring new skills</strong> — from front-end development to working with microcontrollers — and I love challenging myself with projects that push my limits. My goal is not only to become a better coder but also a better collaborator and leader.
+                    </p>
+                    <p>
+                        <strong>Outside of tech,</strong> I enjoy observing how things work, organizing my workflow to be as smooth as possible, and occasionally diving into the world of digital art and design. I’m someone who appreciates clear communication, innovative ideas, and the satisfaction of solving tough problems.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="myskillset">
+            <h2>My Skill Set</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="Python Logo" />
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo" />
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png" alt="C++ Logo" />
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png" alt="C# Logo" />
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" alt="HTML Logo" />
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS Logo" />
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/1200px-Javascript-shield.svg.png" alt="JavaScript Logo" />
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo" />
+                </div>
+                <div class="skill">
+                    <img src="https://www.techmonitor.ai/wp-content/uploads/sites/29/2016/06/SQL.png" alt="SQL Logo" />
+                </div>
+                <div class="skill">
+                    <img src="https://repository-images.githubusercontent.com/115669815/e522d100-85ae-11eb-946c-0a2941660732" alt="GO Logo" />
+                </div>
+            </div>
+        </section>
+
+        <section class="my-work">
+            <h2>My Work</h2>
+            <h3>HTML, CSS and JavaScript</h3>
+            <div class="work-container">
+                <div class="work-item">
+                    <img src="Myworkpic/Todolist.png" alt="Todolist" />
+                    <p class="description">Todolist</p>
+                </div>
+                <div class="work-item">
+                    <img src="Myworkpic/Task Assigner Website.png" alt="Task Assigner Website" />
+                    <p class="description">Task Assigner Website</p>
+                </div>
+                <div class="work-item">
+                    <img src="Myworkpic/My shop.png" alt="My shop" />
+                    <p class="description">My shop</p>
+                </div>
+                <div class="work-item">
+                    <img src="Myworkpic/My First Website .png" alt="My First Website" />
+                    <p class="description">My First Website</p>
+                </div>
+                <div class="work-item">
+                    <img src="Myworkpic/KanBan Board.png" alt="KanBan Board" />
+                    <p class="description">KanBan Board</p>
+                </div>
+                <div class="work-item">
+                    <img src="Myworkpic/Future Shop.png" alt="Future Shop"/>
+                    <p class="description">Future Shop</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-center">
+                <p>&copy; 2025 Phuwanai Aphichitpongchai. All rights reserved.</p>
+            </div>
+
+            <div class="flex space-x-6 ">
+                <a href="NewMainPortfolio.html" class="hover:text-indigo-400">HOME</a>
+                <a href="About.html" class="hover:text-indigo-400">ABOUT</a>
+                <a href="MyAlbum.html" class="hover:text-indigo-400">MY ALBUM</a>
+                <a href="Mywork.html" class="hover:text-indigo-400">MY WORK</a>
+                <a href="Contact.html" class="hover:text-indigo-400">CONTACT</a>
+            </div>
+    
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/markh.phuw.nay" target="_blank" class="hover:text-blue-600">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                
+                <a href="mailto:phuwanaimark24@gmail.com" class="hover:text-gray-600">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                
+                <a href="https://www.instagram.com/mar.kp15uwanai/" target="_blank" class="hover:text-pink-600">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="About.js"></script>
+</body>
+</html>

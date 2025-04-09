@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskAssigner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="TaskAssigner.js" defer></script>
+    </head>
+
+    <body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 space-y-10">
+    <div class="bg-white p-6 rounded-xl shadow-lg w-96">
+        <h1 class="text-xl font-semibold text-center mb-4">Task Assigner Website</h1>
+
+        <label for="task" class="block text-gray-700 mb-2">Task</label>
+        <select id="taskSelect1" class="w-full p-2 border rounded-md mb-5 hover:bg-gray-100"></select>
+
+        <label for="task" class="block text-gray-700 mb-2">Assignee</label>
+        <select id="taskSelect2" class="w-full p-2 border rounded-md mb-5 hover:bg-gray-100"></select>
+
+        <button type="button" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-purple-700" onclick="addTask()">+ Assign Task</button>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg w-96">
+        <h1 class="text-xl font-semibold text-center mb-4">Task List</h1>
+        <div id="taskList" class="flex flex-col gap-y-4 mt-4"></div>
+    </div>
+    <div class="container mx-auto text-center font-bold text-3xl sm:text-8xl md:text-10xl m-2 leading-normal tracking-normal underline decoration-blue-500 decoration-opacity-50 decoration-dashed">
+        <div class="relative w-full h-screen">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex space-x-4 bg-blue-500 text-white px-6 py-3 rounded-lg text-3xl sm:text-6xl md:text-8xl font-bold transition-all duration-300 ease-in-out 
+            hover:bg-blue-700 hover:shadow-lg hover:scale-105 active:bg-blue-800 active:scale-95">
+            <a href="../Mywork.html" class="hover:text-black">Back</a> 
+            </div>
+        </div>
+    </div>
+
+    <script>/*
+
+    //ข้างบน เลือก Option
+    function Selector() {
+        const taskSelector = document.getElementById("taskSelect1");
+        const assigneeSelector = document.getElementById("taskSelect2");
+
+        taskSelector.innerHTML = '<option value="">Select Task</option>';
+        assigneeSelector.innerHTML = '<option value="">Select Assignee</option>';
+
+        tasks.forEach(task => {
+        let option = document.createElement("option");
+            option.value = task.id;
+            option.textContent = task.title;
+            taskSelector.appendChild(option);
+        });
+
+        assignees.forEach(assignee => {
+            let option = document.createElement("option");
+            option.value = assignee.id;
+            option.textContent = assignee.name;
+            assigneeSelector.appendChild(option);
+        });
+        }
+
+    //ข้างล่าง Task List
+    function addTask() {
+        const taskSelector = document.getElementById("taskSelect1");
+        const assigneeSelector = document.getElementById("taskSelect2");
+        const taskList = document.getElementById("taskList");
+
+        const taskId = taskSelector.value;
+        const assigneeId = assigneeSelector.value;
+
+        if (!taskId || !assigneeId) {
+            alert("Please select both a task and an assignee.");
+            return;
+        }
+
+        const task = tasks.find(t => t.id == taskId);
+        const assignee = assignees.find(a => a.id == assigneeId);
+
+        const taskItem = document.createElement("div");
+        taskItem.classList.add("p-4", "bg-white", "relative");
+
+        taskItem.innerHTML = `
+            <hr><br>
+            <div class="flex items-center">
+                <div class="flex-1"> 
+                    <strong class="text-lg">${task.title}</strong>
+                    <p class="text-gray-600 inline">${task.description}</p>
+                    <p class="text-sm text-gray-500 inline">Assignee: ${assignee.name} (${assignee.email})</p>
+                </div>
+                <img src="trash.svg" alt="Delete Task" class="w-6 h-6 ml-2" onclick="removeTask(this)"> 
+            </div>
+        `;
+        taskList.appendChild(taskItem);
+
+        taskSelector.value = "";
+        assigneeSelector.value = "";
+        }
+
+        function removeTask(img) {
+        img.parentElement.remove();
+        }
+
+        Selector();
+        */
+    </script>
+    </body>
+</html>

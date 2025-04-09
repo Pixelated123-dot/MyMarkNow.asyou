@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="Myshop.js"></script>
+</head>
+<body class="bg-gray-100 p-10">
+    <div class="max-w-6xl mx-auto w-full rounded-lg">
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 text-center ">Let's Shopping</h1>
+        <div class="grid grid-cols-4 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="bag" src="bag.png" alt="Product" onclick="addProduct('bag')">
+                <h2 class="text-lg font-semibold mt-2">Bag</h2>
+                <p class="text-gray-500">฿12999</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="Watch" src="clock.png" alt="Product" onclick="addProduct('watch')">
+                <h2 class="text-lg mt-2" >Watch</h2>
+                <p class="text-gray-500">฿61299</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="food" src="food.png" alt="Product" onclick="addProduct('food')">
+                <h2 class="text-lg mt-2">Food</h2>
+                <p class="text-gray-500">฿499</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="Gun" src="gun.png" alt="Product" onclick="addProduct('gun')">
+                <h2 class="text-lg mt-2">Gun</h2>
+                <p class="text-gray-500">฿33999</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img  id="ntd" src="ntd.png" alt="Product" onclick="addProduct('Nintendo Switch')">
+                <h2 class="text-lg mt-2">Nintendo Switch</h2>
+                <p class="text-gray-500">฿9999</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="pant" src="pant.png" alt="Product" onclick="addProduct('pant')">
+                <h2 class="text-lg mt-2">Pant</h2>
+                <p class="text-gray-500">฿299</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="pc" src="pc.png" alt="Product" onclick="addProduct('pc')">
+                <h2 class="text-lg  mt-2">PC</h2>
+                <p class="text-gray-500">฿11111</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="shirt" src="shirt.png" alt="Product" onclick="addProduct('shirt')">
+                <h2 class="text-lg mt-2">Shirt</h2>
+                <p class="text-gray-500">฿359</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg w-96 mt-6 m-auto">
+        <h1 class="text-xl font-semibold text-center mb-4">Product List</h1>
+        <div id="taskList" class="flex flex-col gap-y-4"></div>
+    </div>
+
+    <div id="totalContainer" class="bg-gray-200 p-4 rounded-lg shadow-md mt-4 text-center">
+        <p id="totalPrice" class="text-lg font-bold tex text-4xl sm:text-5xl md:text-6xl">Total: ฿0</p>
+        <button onclick="checkout()" class="mt-4 px-6 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-700">Buy Now</button>
+    </div>
+
+    <div class="container mx-auto text-center font-bold text-3xl sm:text-8xl md:text-10xl m-2 leading-normal tracking-normal underline decoration-blue-500 decoration-opacity-50 decoration-dashed">
+        <div class="relative w-full h-screen">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex space-x-4 bg-blue-500 text-white px-6 py-3 rounded-lg text-3xl sm:text-6xl md:text-8xl font-bold transition-all duration-300 ease-in-out 
+            hover:bg-blue-700 hover:shadow-lg hover:scale-105 active:bg-blue-800 active:scale-95">
+                <a href="../../Mywork.html" class="hover:text-black">Back</a> 
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="Myshop.js"></script>
+</head>
+<body class="bg-gray-100 p-10">
+    <div class="max-w-6xl mx-auto w-full rounded-lg">
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 text-center ">Let's Shopping</h1>
+        <div class="grid grid-cols-4 gap-6">
+            <!-- รูปภาพและข้อมูลสินค้าทั้งหมด -->
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="bag" src="bag.png" alt="Product" onclick="addProduct('Bag')">
+                <h2 class="text-lg font-semibold mt-2">Bag</h2>
+                <p class="text-gray-500">฿12999</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="Watch" src="clock.png" alt="Product" onclick="addProduct('Watch')">
+                <h2 class="text-lg mt-2">Watch</h2>
+                <p class="text-gray-500">฿61299</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="food" src="food.png" alt="Product" onclick="addProduct('Food')">
+                <h2 class="text-lg mt-2">Food</h2>
+                <p class="text-gray-500">฿499</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="Gun" src="gun.png" alt="Product" onclick="addProduct('Gun')">
+                <h2 class="text-lg mt-2">Gun</h2>
+                <p class="text-gray-500">฿33999</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="ntd" src="ntd.png" alt="Product" onclick="addProduct('Nintendo Switch')">
+                <h2 class="text-lg mt-2">Nintendo Switch</h2>
+                <p class="text-gray-500">฿9999</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="pant" src="pant.png" alt="Product" onclick="addProduct('Pant')">
+                <h2 class="text-lg mt-2">Pant</h2>
+                <p class="text-gray-500">฿299</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="pc" src="pc.png" alt="Product" onclick="addProduct('PC')">
+                <h2 class="text-lg  mt-2">PC</h2>
+                <p class="text-gray-500">฿11111</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow w-full text-center font-semibold">
+                <img id="shirt" src="shirt.png" alt="Product" onclick="addProduct('Shirt')">
+                <h2 class="text-lg mt-2">Shirt</h2>
+                <p class="text-gray-500">฿359</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg w-96 mt-6 m-auto">
+        <h1 class="text-xl font-semibold text-center">Product List</h1>
+        <div id="taskList" class="flex flex-col gap-y-4"></div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: "Bag", price: 12999, image: "bag.png" },
+            { id: 2, name: "Watch", price: 61299, image: "clock.png" },
+            { id: 3, name: "Food", price: 499, image: "food.png" },
+            { id: 4, name: "Gun", price: 33999, image: "gun.png" },
+            { id: 5, name: "Nintendo Switch", price: 9999, image: "ntd.png" },
+            { id: 6, name: "Pant", price: 299, image: "pant.png" },
+            { id: 7, name: "PC", price: 11111, image: "pc.png" },
+            { id: 8, name: "Shirt", price: 359, image: "shirt.png" }
+        ];
+
+        // ฟังก์ชันที่จะเพิ่มสินค้าเข้าในรายการ
+        function addProduct(productName) {
+            // ค้นหาข้อมูลสินค้าจากชื่อ
+            const product = products.find(p => p.name.toLowerCase() === productName.toLowerCase());
+
+            if (product) {
+                const productsList = document.getElementById('taskList');
+                const newTask = document.createElement('div');
+                newTask.classList.add('bg-gray-100', 'p-4', 'rounded-lg', 'shadow-md');
+                
+                // เพิ่มชื่อสินค้าและราคาในรายการ
+                newTask.innerHTML = `
+                    <p class="text-lg font-medium">${product.name} - ฿${product.price}</p>
+                `;
+                productsList.appendChild(newTask);
+            }
+        }
+    </script>
+</body>
+</html>

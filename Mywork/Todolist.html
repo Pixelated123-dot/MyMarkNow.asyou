@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url('./picture.jpg')] bg-cover bg-center min-h-[240vh] container mx-auto p-4 text-center">
+    <!-- เนื้อหาของเว็บ -->
+
+
+    <div class="container p-20 font-bold text-3xl sm:text-8xl md:text-10xl m-2 leading-normal tracking-normal underline decoration-blue-500 decoration-opacity-50 decoration-dashed">
+        <a class="text-black">ToDo</a> 
+        <a class="text-orange-600">LIST</a>
+    </div>
+
+    <div class="mx-32 font-bold text-3xl sm:text-4xl md:text-6xl m-2 ">
+        <a class="text-black">Your</a> 
+        <a class="text-orange-600">Project</a>
+    </div>
+
+    <!--form-->
+    <form id="addform" class="flex items-center space-x-4 mt-4">
+        <input type="text" name="task" id="Formdetail"class="p-4 text-lg w-full mt-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out">
+        <button type="submit" class="font-bold sm:text-1xl md:text-2xl bg-blue-100 mt-5 px-6 py-3 text-lg rounded-lg shadow-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all duration-300 ease-in-out">
+            Add Task
+        </button>
+    </form>
+
+    <!--display-->
+    <div id="taskList" class="flex flex-col gap-y-4 mt-4"></div>
+
+    </div>
+
+    <div class="container mx-auto text-center font-bold text-3xl sm:text-8xl md:text-10xl m-2 leading-normal tracking-normal underline decoration-blue-500 decoration-opacity-50 decoration-dashed">
+        <div class="relative w-full h-screen">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex space-x-4 bg-blue-500 text-white px-6 py-3 rounded-lg text-3xl sm:text-6xl md:text-8xl font-bold transition-all duration-300 ease-in-out 
+            hover:bg-blue-700 hover:shadow-lg hover:scale-105 active:bg-blue-800 active:scale-95">
+                <a href="../Mywork.html" class="hover:text-black">Back</a> 
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let task = [
+    ];
+
+    document.getElementById("addform").addEventListener("submit", function(event) {
+        event.preventDefault(); // ป้องกันการรีเฟรชหน้าเว็บ
+        addTask(); // เรียกฟังก์ชันเพิ่ม Task
+    });
+// Function เพิ่ม Task
+function addTask() {
+    const Formdetail = document.getElementById("Formdetail");
+
+    if(Formdetail.value === ""){
+        alert("Please enter task detail");
+        return;
+    }
+
+    let newTask = {
+        detail: Formdetail.value,
+        done: false,
+    };
+    task.push(newTask);
+
+    Formdetail.value = ""; // ล้างค่า input หลังเพิ่ม Task
+    displayTasks(); // อัปเดตรายการ Task ใหม่
+}
+
+// Function ลบ Task
+function deleteTask(index) {
+    task.splice(index, 1);
+    displayTasks();
+}
+
+// Function ทำเครื่องหมาย Task ว่าเสร็จแล้ว
+function doneTask(index) {
+    task[index].done = true;
+    displayTasks();
+}
+
+// แสดง Task ในหน้าเว็บ
+function displayTasks() {
+    let taskList = document.getElementById("taskList");
+    taskList.innerHTML = ""; // เคลียร์ของเก่าออกก่อน
+
+    for (let i = 0; i < task.length; i++) {
+        // div หลักของ Task
+        let taskItem = document.createElement("div");
+        taskItem.classList.add("flex", "justify-between", "items-center", "bg-gray-100", "p-4", "rounded-lg", "shadow-md");
+
+        // span แสดงรายละเอียด Task
+        let taskDetail = document.createElement("span");
+        taskDetail.innerText = task[i].detail;
+        taskDetail.classList.add("font-bold", "sm:text-3xl", "md:text-5xl");
+        if (task[i].done) {
+            taskDetail.classList.add("line-through", "text-gray-500"); // ขีดฆ่า Task ที่ทำเสร็จแล้ว
+        }
+
+        // div สำหรับปุ่ม
+        let taskAction = document.createElement("div");
+        taskAction.classList.add("flex", "space-x-2");
+
+        // ปุ่ม Done
+        let doneButton = document.createElement("button");
+        if(task[i].done){
+            doneButton.classList.add("bg-gray-600", "text-white", "sm:text-1xl", "md:text-2xl", "rounded-lg", "p-2");
+        }   else {
+            doneButton.classList.add("bg-green-400", "text-white", "sm:text-1xl", "md:text-2xl", "rounded-lg", "p-2");
+        }
+        doneButton.innerText = "Done";
+        doneButton.onclick = () => doneTask(i);
+
+        // ปุ่ม Delete
+        let deleteButton = document.createElement("button");
+        deleteButton.classList.add("bg-red-600", "text-white", "sm:text-1xl", "md:text-2xl", "rounded-lg", "p-2");
+        deleteButton.innerText = "Delete";
+        deleteButton.onclick = () => deleteTask(i);
+
+        // ใส่ปุ่มใน div action
+        taskAction.appendChild(doneButton);
+        taskAction.appendChild(deleteButton);
+
+        // ใส่ taskDetail และ taskAction ใน taskItem
+        taskItem.appendChild(taskDetail);
+        taskItem.appendChild(taskAction);
+
+        // ใส่ taskItem ลงใน taskList
+        taskList.appendChild(taskItem);
+    }
+}
+
+// แสดง Task ที่มีอยู่เมื่อโหลดหน้าเว็บ
+displayTasks();
+
+
+    </script>
+
+</body>
+</html>

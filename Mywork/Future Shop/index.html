@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Shop</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav>
+        <div><h1>Future Shop</h1></div>
+        <div>
+            <button id="viewCart">viewCart</button>
+            <div id="cartSummary">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ชื่อสินค้า</th>
+                            <th>จำนวน</th>
+                            <th>ราคา</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartSummary_items">
+
+                    </tbody>
+                    <tfoot>
+                        <th colspan="2">ราคารวม</th>
+                        <td id="cartSummary_total">0</td>
+                    </tfoot>
+
+                </table>
+            </div>
+            
+        </div>
+    </nav>
+
+    <main>
+        <section id="productList">
+            
+        </section>
+
+        <div class="container mx-auto text-center font-bold text-3xl sm:text-8xl md:text-10xl m-2 leading-normal tracking-normal underline decoration-blue-500 decoration-opacity-50 decoration-dashed">
+            <div class="relative w-full h-screen">
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex space-x-4 bg-blue-500 text-white px-6 py-3 rounded-lg text-3xl sm:text-6xl md:text-8xl font-bold transition-all duration-300 ease-in-out 
+                hover:bg-blue-700 hover:shadow-lg hover:scale-105 active:bg-blue-800 active:scale-95">
+                    <a href="../../Mywork.html" class="hover:text-black">Back</a> 
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </main>
+
+
+
+
+
+</body>
+</html>

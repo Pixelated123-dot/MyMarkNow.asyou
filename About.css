@@ -1,0 +1,342 @@
+/*All*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Chonburi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Winky+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/*nav*/
+
+nav {
+    color: rgb(103, 180, 248);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 8px 24px;
+    background-color: whitesmoke;
+    z-index: 10;
+}
+
+nav h1 {
+    font-size: xxx-large;
+    margin: 0;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+a {
+    font-size: large;
+    text-decoration: none;
+    color: rgb(103, 180, 248);
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid black;
+    background-color: rgba(217, 216, 216, 0.634);
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(215, 173, 18);
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+}
+
+.left:hover h1 {
+    color: rgb(232, 232, 140);
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+}
+
+
+/*intro*/
+.intro {
+    padding: 70px;
+    text-align: center;
+    background-image: url('MyAlbum/bgabout.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: black;
+    z-index: 1; 
+}
+
+.overlay h1 {
+    font-size: 60px;
+    padding-bottom: 20px;
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+.overlay p {
+    padding: 15px;
+    font-size: 30px;
+    font-family: 'Winky Sans', sans-serif;
+    border: 2px solid white;
+    background-color: aliceblue;
+    border-radius: 13px;
+    transition: all 0.3s ease; 
+}
+
+.overlay p:hover {
+    border-color: #FFD700; 
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); 
+    background-color: #f0f8ff; 
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover; 
+    border-radius: 25px;
+}
+
+.btn-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-btn {
+    left: 5%;
+}
+
+.right-btn {
+    right: 5%;
+}
+/*Main*/
+/* Intro Hero Section */
+.intro-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* ปรับให้สูงแค่ครึ่งหนึ่งของหน้าจอ */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    h1 {
+        font-family: 'Rubik Doodle Shadow', cursive;
+        font-size: 65px;
+        margin-top: 40px;
+        margin-left: 40px;
+        margin-bottom: 0;
+    }
+    h1:hover {
+        text-decoration: yellow underline overline;
+        color: #0b18c7;
+        font-weight: bold;
+    }
+    p {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 30px;
+        line-height: 1.6;
+        margin-left: 40px;
+    }
+}
+
+.intro-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('MyAlbum/intro-hero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px) brightness(0.7); 
+    z-index: -1;
+}
+
+.intro-hero .overlay {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* About Me Section */
+.about-me {
+    padding: 80px 50px;
+    background-color: white; 
+    h2 {
+        font-size: 65px;
+        color: #222;
+        font-family: 'Quicksand', sans-serif;
+    }
+    h2:hover {
+        text-decoration: green wavy underline;
+        color: #007bff;
+    }
+    p {
+        font-size: 20px;
+        margin: 15px 0;
+        line-height: 1.8;
+        color: #333;
+        font-family: 'DM Sans', sans-serif;
+    }
+    strong:hover{
+        text-decoration: underline;
+        color: #154edf;
+    }
+}
+
+
+
+.about-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text-story {
+    flex: 1; 
+    text-align: left; 
+    margin-left: 40px; 
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 500px;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/*skill section*/
+.myskillset {
+    padding: 80px 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+    h2 {
+        font-size: 65px;
+        color: #222;
+        font-family: 'Quicksand', sans-serif;
+        margin-bottom: 40px;
+    }
+    h2:hover {
+        text-decoration: green dashed underline;
+        color: #007bff;
+    }
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill {
+    text-align: center;
+    width: 120px;
+    img {
+        width: 60px; 
+        height: 60px; 
+        margin-bottom: 10px;
+    }
+}
+
+/*my work section*/
+.my-work {
+    padding: 80px 50px;
+    background-color: white;
+    text-align: center;
+    h2 {
+        font-size: 65px;
+        color: #222;
+        font-family: 'Quicksand', sans-serif;
+        margin-bottom: 40px;
+    }
+    h2:hover {
+        text-decoration: green double underline;
+        color: #007bff;
+    }
+    h3 {
+        font-size: 50px;
+        color: #222;
+        font-family: 'Quicksand', sans-serif;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+.work-container {
+    display: flex;
+    flex-wrap: wrap; /* ให้สามารถพับแถวได้เมื่อพื้นที่ไม่พอ */
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.work-item {
+    width: 30%; /* ให้แต่ละไอเทมมีขนาด 30% ของแถว */
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.work-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.work-item .description {
+    color: #333;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.work-item:hover {
+    transform: translateY(-10px); /
+}

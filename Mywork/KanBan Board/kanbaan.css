@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    display:flex;
+    justify-content: center;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#kanbanBoard {
+    display: flex;
+    padding: 48px;
+    width: 100%;
+    height: 100%;
+    column-gap: 24px;
+}
+
+.swimlane {
+    border: 1px solid black;
+    flex-basis: 1;
+    flex-shrink: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.swimlane h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    background-color: rgb(34, 13, 229);
+    color:white;
+}
+
+.card{
+    padding: 16px;
+    border-radius: 4px;
+    .toDo &{
+        background-color: yellow;
+        color:black;
+    }
+    .inProgress &{
+        background-color: green;
+        color:black;
+    }
+    .Done &{
+        background-color: black;
+        color:white;
+    }
+    .Hold &{
+        background-color: red;
+        color: white;
+    }
+}
+
+
+#dragged {
+    background-color: aquamarine;
+}
+
+/*#kanbanBoard {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 20px;
+}
+
+.swimlane {
+    flex: 1;
+    min-height: 300px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.swimlane h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+}*/
