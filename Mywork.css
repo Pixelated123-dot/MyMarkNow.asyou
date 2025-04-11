@@ -310,3 +310,48 @@ a:hover {
 .slider-btn.next {
     right: 20px;
 }
+
+.portfolio {
+    padding: 50px;
+    text-align: center;
+    width: 100%;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 60px;
+
+    }
+
+    h2:hover{
+        text-decoration: rgb(219, 39, 69) wavy underline;
+        color: #0a189b;
+    }
+}
+
+.portfolio-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 1000px;
+    text-align: center;
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    a {
+        font-size: 22px;
+        color: #222;
+        margin-bottom: 15px;
+        border: 0;
+    }
+    .portfolio-item p {
+        font-size: 1rem;
+        color: #555;
+    }
+}
