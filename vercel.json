@@ -1,6 +1,6 @@
 {
     "outputDirectory": "build",
     "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
+      { "source": "/(.*)", "destination": "/NewMainPortfolio.html" }
     ]
   }
